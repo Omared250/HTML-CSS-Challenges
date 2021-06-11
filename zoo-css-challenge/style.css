@@ -29,8 +29,20 @@ section {
   background-color: #f8f0fb;
 }
 
+#logo {
+  border: none;
+}
+
 img {
   border: 5px solid #8075ff;
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+a {
+  color: black;
 }
 
 h1,
@@ -57,13 +69,18 @@ h3 {
 
 button {
   display: inline-block;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 17px;
   padding: 10px 20px;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
   background-color: #372772;
   border: 2px solid black;
   color: #fff;
+}
+
+button:hover, :focus {
+  background-color: #8c72e7;
 }
 
 footer {
@@ -76,6 +93,8 @@ footer {
 }
 
 .introduction {
+  text-align: center;
+  background-color: white;
 }
 
 #badge {
@@ -103,9 +122,23 @@ footer {
   font-size: 125%;
 }
 
+.image-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .image-container img {
+  margin-right: 1rem;
   vertical-align: top;
-  border: 5px solid #747c92;
+  border: 5px solid gray;
+}
+
+.image-container img:first-of-type {
+  border: 5px solid green;
+}
+
+.image-container img:last-of-type {
+  border: 5px solid blue;
 }
 
 .image-container img:first-of-type {
@@ -117,13 +150,25 @@ footer {
   color: #f0e100;
 }
 
-.giraffe {
-  background-color: #465775;
-  color: #56e39f;
+.tigers h2,h3 {
+    color: #E8CFF7;
 }
 
-.giraffe h2 {
-  color: #ef6f6c;
+.giraffe {
+  background-color:  #483C46;
+  color: #BEEE62;
+}
+
+.giraffe p:first-of-type {
+  font-size: 1.5em;
+}
+
+.giraffe h2,h3 {
+  color: #F4743B;
+}
+
+section.news {
+  text-align: center;
 }
 
 .card {
@@ -160,12 +205,14 @@ footer {
   background-size: cover;
   background-position: center;
   padding: 100px 5%;
+  border-radius: 7px;
 }
 
 .education-container {
   background-color: rgba(255, 255, 255, 0.75);
   padding: 50px;
   max-width: 400px;
+  border-radius: 7px;
 }
 
 .education-container h3,
@@ -176,6 +223,8 @@ footer {
 /*Membership*/
 
 .membership {
+  margin: auto;
+  max-width: 700px;
   text-align: center;
   background-color: #fffffc;
 }
@@ -190,6 +239,73 @@ footer {
 
 /*Programs*/
 
+.programs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50px 200px 50px 50px;
+}
+
 .programs .card {
   display: block;
+  text-align: center;
 }
+
+.programs > h2 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  justify-self: center;
+  align-self: center;
+}
+
+div:nth-child(2) {
+  width: 80%;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  justify-self: center;
+  align-self: center;
+}
+
+div:nth-child(3) {
+  width: 80%;
+  grid-column: 3/4;
+  grid-row: 2/3;
+  justify-self: center;
+  align-self: center;
+}
+
+div:nth-child(4) {
+  width: 80%;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  justify-self: center;
+  align-self: center;
+}
+
+.programs > h3 {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  justify-self: center;
+  align-self: center;
+}
+
+a:first-of-type {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  justify-self: center;
+  align-self: center
+}
+
+a:nth-of-type(2) {
+  grid-column: 2/3;
+  grid-row: 4/5;
+  justify-self: center;
+  align-self: center
+}
+
+a:last-of-type {
+  grid-column: 3/4;
+  grid-row: 4/5;
+  justify-self: center;
+  align-self: center
+}
+
